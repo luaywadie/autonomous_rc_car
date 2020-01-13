@@ -1,3 +1,1 @@
-# autonomous_rc_car
-
-Hello World
+# Autonomous RC Car
