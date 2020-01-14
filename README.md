@@ -1,4 +1,4 @@
-# Autonomous RC Car
+# Autonomous RC Car - Raspberry Pi | Python
 
 Constructing an RC Car to drive autonomously or controlled via remote operations such as a mobile device (Web server) or an infrared remote sensor (Receiver).
 
