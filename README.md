@@ -10,10 +10,8 @@ Features to include but not limited to:
 - Temperature & Humidity | Barometric Pressure | Gyroscope sensors
 
 <ins>Parts to Order</ins>
-- 4WD Robot Chassis RC ⟲
-  - https://www.ebay.com/itm/4WD-Robot-Chassis-Smart-Car-For-Raspberry-Pi-4-3-2-Zero-BBC-Microbit-Arduino-Pro/233452777197
-- L298N Dual H Bridge Motor Driver ⟲
-  - https://www.ebay.com/itm/US-L298N-Dual-H-Bridge-Stepper-Motor-Driver-Controller-Board-Module-Raspberry-Pi/162683322422
+- [4WD Robot Chassis RC](https://www.amazon.com/gp/product/B07F759T89/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) ✔
+- [L298N Dual H Bridge Motor Driver Controller](https://www.amazon.com/gp/product/B01M29YK5U/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) ✔
 - 5MP Camera Module ⟲
   - https://www.ebay.com/itm/5MP-Camera-Module-Webcam-Video-1080p-Transparent-Holder-For-Raspberry-Pi-3B-2B/372630446368?_trksid=p2485497.m4902.l9144
 - Ultrasonic Distance Transducer Sensor ⟲
