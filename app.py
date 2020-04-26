@@ -4,8 +4,10 @@ import time
 import dht11 # Github Adafruit Therm and Humidity Sensor Parser
 import threading
 
+# Init App
 app = Flask(__name__)
 
+# Global Variables
 current_position = 22
 target_position = 0
 condition = False
@@ -37,6 +39,7 @@ data = [
     {'type' : 0},
 ]
 
+# Multithreading (Development)
 def startSurv():
     global current_position, target_position, condition, data
     # Check if there
@@ -52,8 +55,6 @@ def startSurv():
             
     threading.Timer(5.0,startSurv).start()
         
-# RC
-
 # Core Variables
 area = [1,2]
 temp = 0
@@ -74,6 +75,7 @@ B_LED = 16
 Y_LED = 25
 
 GPIO.setmode(GPIO.BCM)
+
 # Motors
 GPIO.setup(in1,GPIO.OUT)
 GPIO.setup(in2,GPIO.OUT)
@@ -82,9 +84,11 @@ GPIO.setup(in4,GPIO.OUT)
 GPIO.setup(en1,GPIO.OUT)
 GPIO.setup(en2,GPIO.OUT)
 
+# LEDs
 GPIO.setup(B_LED,GPIO.OUT)
 GPIO.setup(Y_LED,GPIO.OUT)
 
+# Power Control
 p1 = GPIO.PWM(en1,1000)
 p2 = GPIO.PWM(en2,1000)
 p1.start(0)
@@ -115,6 +119,7 @@ def getDistance():
 
 	return (end - start) * 17000
 
+# Temperature reading
 def getTemp():
 	# read data using Pin GPIO21 
 	instance = dht11.DHT11(pin=23)
@@ -125,9 +130,8 @@ def getTemp():
 			# print("Temp: %d C" % result.temperature +' '+"Humid: %d %%" % result.humidity)
 			return result
 
-# New
 
-
+# Determines if a move direction is possible
 def movePossible(dir):
     global current_position, data
     if (dir == "n"):
@@ -199,6 +203,7 @@ def movePossible(dir):
                 return False
     return False
 
+# Sets current facing direction to a blockage state
 def setSectorObj(dir):
     global data, current_position
     if (dir == "n"):
@@ -288,6 +293,8 @@ def moveRight():
 def cleanGPIO():
 	GPIO.cleanup()
 
+# Flask structure
+	
 @app.route("/")
 def hello():
     return render_template('index.html')
