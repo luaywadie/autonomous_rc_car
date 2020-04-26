@@ -1,0 +1,136 @@
+body {
+  background: #333;
+  margin: 0px;
+}
+
+button:focus {
+  outline: none;
+}
+
+#btns {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 20px;
+  margin:20px;
+  width: 200px;
+  font-size:20px;
+}
+
+#title {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#status {
+  margin-left:20px;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+.disabled {
+    background: linear-gradient(45deg, #e64c4c, #ce1d1d);
+}
+
+.enabled {
+  background-color:#52e46a;
+}
+
+#initial_window {
+    height: 800px;
+    position: fixed;
+    width: 100%;
+    background: #cecece59;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#startRC {
+    height: 100px;
+    border: 0;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    background: radial-gradient(white, #d4d4d49c);
+    text-shadow: 2px 2px #44444438;
+}
+
+#clearRC {
+    padding: 5px 30px;
+    border-radius: 50px;
+    border: 0;
+    font-size: 20px;
+    margin-left: 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #e835cb, #8500ff);
+    text-shadow: 2px 2px #33333370;
+}
+
+#panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width:33%;
+  margin: auto;
+}
+
+.sector {
+  font-style: normal;
+  color:#fff;
+  padding:50px;
+  border: 1px solid #fff;
+  margin: 5px;
+}
+
+.current {
+  border: 1px solid #35e4ec;
+  box-shadow: inset 0 0 0px 0 #35e4ec;
+  animation: pulse 1s infinite;
+}
+
+.hot {
+  border: 1px solid #e65151;
+  box-shadow: inset 0 0 10px 0 #e65151;
+}
+
+.object {
+  border: 1px solid #ff7600;
+  box-shadow: inset 0 0 10px 0 #ff7600;
+  border-radius: 50px;
+}
+
+.target {
+  border: 1px solid #17e027;
+  box-shadow: inset 0 0 0 0 #17e027;
+  animation: pulse_target 2s infinite;
+}
+
+.visited {
+  border: 1px solid #80808040;
+}
+
+@keyframes pulse {
+  0% {border-color: #fff}
+  50% {border-color: #35e4ec;
+    box-shadow: inset 0 0 10px 0 #35e4ec;}
+  100% {border-color: #fff}
+}
+
+@keyframes pulse_target {
+  0% {border-color: #fff}
+  50% {border-color: #17e027;
+    box-shadow: inset 0 0 20px 0 #17e027;}
+  100% {border-color: #fff}
+}
