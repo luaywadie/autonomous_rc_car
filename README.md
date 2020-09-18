@@ -32,5 +32,5 @@ Features to include but not limited to:
 - Cyan border color is the current position of the RC Car.
 - Green border is the chosen destination (Manual).
 - Orange circle border denotes an object within that sector.
-- Red border represents temperatures > 28° C or 89° F
+- Red border represents temperatures > 32° C or ~89° F
 - Shaded border is for visited sectors.
